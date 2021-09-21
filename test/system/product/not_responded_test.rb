@@ -54,6 +54,6 @@ class ProductsTest < ApplicationSystemTestCase
   test 'show all not responded products without pagination' do
     visit_with_auth '/products/not_responded', 'komagata'
     assert_selector '.thread-list-item', count: Product.not_responded_products.size
-    assert_no_selector '.pagination'
+    assert_no_selector '.o-pagination'
   end
 end

@@ -5,7 +5,7 @@
     |
     | ロード中
 .reports(v-else-if='reports.length > 0 || !isUncheckedReportsPage')
-  nav.pagination(v-if='totalPages > 1')
+  nav.o-pagination(v-if='totalPages > 1')
     pager(v-bind='pagerProps')
   .thread-list.a-card
     .thread-list__items
@@ -16,7 +16,7 @@
         :current-user-id='currentUserId'
       )
     unconfirmed-link(v-if='isUncheckedReportsPage', label='未チェックの日報を一括で開く')
-  nav.pagination(v-if='totalPages > 1')
+  nav.o-pagination(v-if='totalPages > 1')
     pager(v-bind='pagerProps')
 .o-empty-message(v-else)
   .o-empty-message__icon
