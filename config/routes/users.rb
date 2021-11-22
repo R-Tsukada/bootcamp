@@ -12,8 +12,8 @@ Rails.application.routes.draw do
     resources :comments, only: %i(index), controller: "users/comments"
     resources :products, only: %i(index), controller: "users/products"
     resources :questions, only: %i(index), controller: "users/questions"
+    resource :talk, only: %i(show), controller: "users/talk"
     get "portfolio" => "users/works#index", as: :portfolio
-    get "talk" => "users/talk#show"
     patch "graduation", to: "graduation#update", as: :graduation
     get "mail_notification", to: "mail_notification#update", as: :mail_notification
   end
