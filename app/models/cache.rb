@@ -68,10 +68,18 @@ class Cache
       end
     end
 
+    def delete_mentioned_notification_count(user_id)
+      Rails.cache.delete "#{user_id}-mentioned_notification_count"
+    end
+
     def unread_mentioned_notification_count(user)
       Rails.cache.fetch "#{user.id}-unread_mentioned_notification_count" do
         user.notifications.where(kind: :mentioned, read: false).count
       end
+    end
+
+    def delete_unread_mentioned_notification_count(user_id)
+      Rails.cache.delete "#{user_id}-unread_mentioned_notification_count"
     end
   end
 end

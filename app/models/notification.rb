@@ -49,6 +49,10 @@ class Notification < ApplicationRecord
     target ? where(kind: TARGETS_TO_KINDS[target]) : all
   }
 
+  after_create NotificationCallbacks.new
+  after_update NotificationCallbacks.new
+  after_destroy NotificationCallbacks.new
+
   def self.came_comment(comment, receiver, message)
     Notification.create!(
       kind: 0,
