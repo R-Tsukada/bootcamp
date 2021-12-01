@@ -98,6 +98,16 @@ comment16:
   commentable: event1 (Event)
   description: "テスト用 event1へのコメント"
 
+comment17:
+  user: machida
+  commentable: report6 (Report)
+  description: "@sotugyou メンションありの通知を発生させるコメント"
+
+comment18:
+  user: hajime
+  commentable: report7 (Report)
+  description: "@sotugyou メンションありの通知を発生させるコメント"
+
 <% (1..20).each do |i| %>
 comment<%= i + 16 %>:
   user: komagata

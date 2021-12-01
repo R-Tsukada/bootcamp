@@ -22,6 +22,22 @@ notification_mentioned:
   path: "/reports/<%= ActiveRecord::FixtureSet.identify(:report5) %>#comment_<%= ActiveRecord::FixtureSet.identify(:comment9)%>"
   read: false
 
+notification_mentioned_and_already-read:
+  kind: 2
+  user: sotugyou
+  sender: machida
+  message: machidaさんからメンションがきました。
+  path: "/reports/<%= ActiveRecord::FixtureSet.identify(:report6) %>#comment_<%= ActiveRecord::FixtureSet.identify(:comment17)%>"
+  read: true
+
+notification_mentioned_and_unread:
+  kind: 2
+  user: sotugyou
+  sender: hajime
+  message: hajimeさんからメンションがきました。
+  path: "/reports/<%= ActiveRecord::FixtureSet.identify(:report7) %>#comment_<%= ActiveRecord::FixtureSet.identify(:comment18)%>"
+  read: false
+
 notification_read:
   kind: 0
   user: sotugyou
